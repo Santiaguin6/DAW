@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro | PI & PICTURES IMAGES</title>
+</head>
+<body>
+
+	 <header>
+		<h1>PI & PICTURES IMAGES</h1>
+		<h2>Registro</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index_no_reg.html">Principal</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+        </ul>
+    </nav>
+
+	<main>
+		<h3>Formulario de Registro</h3>
+		<form action="./index_no_reg.html">
+
+			<label for="nombre" >Nombre:</label> <input id="nombre"  type="text"  name="nombre" required autofocus> <br>
+			<label for="pwd" >Contraseña:</label> <input id="pwd"  type="password"  name="pwd" required> <br>
+			<label for="pwd2" >Repetir:</label> <input id="pwd2"  type="password"  name="pwd2" required> <br>
+			<label for="mail" >Email:</label> <input id="mail"  type="email"  name="mail" required> <br>
+
+			<fieldset>
+				<legend>Sexo:</legend>
+				<input type="radio" id="hombre" name="sexo" value="hombre">
+				<label for="hombre">Hombre</label>
+				<input type="radio" id="mujer" name="sexo" value="mujer">
+				<label for="mujer">Mujer</label>
+				<input type="radio" id="otro" name="sexo" value="otro">
+				<label for="otro">Otro</label>
+			</fieldset>
+			
+			<!--date no soportado por todos los navegadores-->
+			<label for="fecha" >Fecha de nacimiento:</label> <input id="fecha"  type="date"  name="fecha" required> <br>
+			<label for="ciudad" >Ciudad:</label> <input id="ciudad" type="text"  name="ciudad" required> <br>
+			<label for="pais" >País de residencia:</label> <input id="pais"  type="text"  name="pais" required> <br>
+			<label for="foto" >Foto:</label> <input id="foto"  type="file"  name="foto" required> <br><br>
+
+			<input type="submit" value="Registrar">
+			<br><br>
+		</form>
+    </main>
+
+
+    <footer>
+        &copy;2019
+
+        <address>
+            Santiago López santiaguin55.sl@gmail.com <br>
+            Rafael Bayón rafabayonazocar@gmail.com
+        </address>
+    </footer>
+
+</body>
+</html>
