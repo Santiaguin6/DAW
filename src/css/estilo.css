@@ -1,0 +1,92 @@
+/*################################################################
+####################### COMUNES ####################################
+##################################################################*/
+@import url('https://fonts.googleapis.com/css?family=Lato'); 
+
+*{
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Lato,sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p,h1,h2,h3,h4{
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    min-width: 360px;
+    background-color:  #000 ;
+}
+
+    body>header{
+        background-color: #0B466D;
+    }
+
+    body>nav>ul{
+        padding: 0;
+        margin: 0;
+    }
+
+        body>nav>ul>li>a:hover{
+            color: #505953;
+        }
+
+    body>footer {
+        background-color: #1E1E1E;
+        font-size: 15px;
+        text-align: center;
+    }
+
+        body>footer>address{
+            display:flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+            body>footer>address>p{
+                color: #939694;
+            }
+
+
+/*################################################################
+####################### INDEX  ####################################
+##################################################################*/
+body>main>section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    body>main>section>article{
+        background-color: #141010;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1px;
+    }
+
+        body>main>section>article>a>img:hover{
+            cursor: pointer;
+            opacity: 0.2;
+        }
+
+        body>main>section>article>footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: #CD1DCC;
+        }
+
+        body>main>section>article>footer>p,time{
+            margin-right: 7px;
+            color: #CD1DCC;
+        }
