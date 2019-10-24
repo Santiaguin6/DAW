@@ -13,12 +13,17 @@
 
 a{
     color: #000;
+    text-decoration: none;
 }
 
 h1,h2,h3,h4{
     font-family: Lato,serif;
     color: #FFF;
     margin: 0;
+}
+
+a:hover,h1:hover{
+    color: #3D79C1;
 }
 
 img{
@@ -46,13 +51,6 @@ ul{
     li{
         margin-right: 20px;
     }
-
-        li>a:hover{
-            color: #505953;
-        }
-
-
-
 
 .neg{
     color: #000;
@@ -291,13 +289,12 @@ thead{
 
 .foto{
     margin: 0 auto;
-    max-width: 660px;
+    max-width:  60vw;
 }
 
     .foto>img{
         height: 100%;
         width: 100%;
-        max-height: 637px;
     }
 
 main>section>footer{
@@ -326,10 +323,6 @@ ul{
         font-size: 1.5em;
         margin: 10px;
     }
-
-        li>a:hover{
-            color: #3D79C1;
-        }
 
 /*########################################################################
 ####################### MEDIA QUERYS  ####################################
