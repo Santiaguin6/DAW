@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--evitar que el dispositivo escale el diseño al tamaño de la pantalla-->
+	<title>Registro | PI & PICTURES IMAGES</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!--<link rel="stylesheet" href="../css/estilo.css">-->
+    <link rel="stylesheet" href="../css/contraste.css">
+</head>
+<body>
+
+	 <header>
+		<a href="../html/index_no_reg.html"><h1>PI & PICTURES IMAGES</h1></a>
+		<h2>Registro</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index_no_reg.html">Principal</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+        </ul>
+    </nav>
+
+	<main>
+		<h3>Formulario de Registro</h3>
+		<form action="./index_no_reg.html" class="formulario">
+			<div><label for="nombre" >Usuario:</label> <p class="ast">*</p> <input id="nombre"  type="text"  name="nombre" required autofocus> </div>
+			<div><label for="pwd" >Contraseña:</label><p class="ast">*</p> <input id="pwd"  type="password"  name="pwd" required> </div>
+			<div><label for="pwd2" >Repetir:</label><p class="ast">*</p> <input id="pwd2"  type="password"  name="pwd2" required> </div>
+			<div><label for="mail" >Email:</label><p class="ast">*</p> <input id="mail"  type="email"  name="mail" required> </div>
+			<div><fieldset>
+				<legend>Sexo:</legend>
+				<input type="radio" id="hombre" name="sexo" value="hombre">
+				<label for="hombre">Hombre</label>
+				<input type="radio" id="mujer" name="sexo" value="mujer">
+				<label for="mujer">Mujer</label>
+				<input type="radio" id="otro" name="sexo" value="otro">
+				<label for="otro">Otro</label>
+			</fieldset></div>
+			<!--date no soportado por todos los navegadores-->
+			<div><label id="fech" for="fecha" >Fecha de nacimiento:</label><p class="ast">*</p> <input id="fecha"  type="date"  name="fecha" required> </div>
+			<div><label for="ciudad" >Ciudad:</label><p class="ast">*</p> <input id="ciudad" type="text"  name="ciudad" required> </div>
+			<div><label for="pais" >País de residencia:</label><p class="ast">*</p> <input id="pais"  type="text"  name="pais" required> </div>
+			<div><label id="fot" for="foto" >Foto:</label><p class="ast">*</p> <input id="foto"  type="file"  name="foto" required> </div>
+			<div><input id="bot" type="submit" value="Registrar"></div>
+		</form>
+    </main>
+
+    <footer>
+		PI & PICTURES IMAGES
+        &copy;2019
+        <address>
+            <p>Santiago López santiaguin55.sl@gmail.com </p>
+            <p>Rafael Bayón rafabayonazocar@gmail.com</p>	 
+        </address>
+    </footer>
+</body>
+</html>
