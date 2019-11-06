@@ -24,15 +24,15 @@ var EXCL = 33, ALMH = 35, DOL = 36, PERC = 37, AMP = 38, COM = 39, AST = 42, MAS
 var contMayus;
 var contMin;
 
-//metodo inicial que llama al metodo que revisa el formulario
+/********************************************************************************************* */
 function init(){
     logmsg("estoy en init");
     let form = document.querySelector("form");    
     form.addEventListener("submit",checkForm);
+
     //log("muestro form",form);
 }
 
-//recupera valores del formulario, y llama a los métodos encargados de revisar cada campo
 function checkForm(e){
     logmsg("estoy en checkForm");
     let form = e.target,
@@ -43,20 +43,31 @@ function checkForm(e){
         sexo = form.sexo.value,
         fecha = form.fecha.value;
 
-    checkName(nombre);
+    if(checkName(nombre)){
+        if(checkPwd(pwd)){
+            if(pwd2.length > 0 && checkPwd2(pwd,pwd2)){
+                if(checkEmail(email)){
+
+                }
+            }
+        }
+    }
+    
+    
 
     e.preventDefault();
 }
 
-
-//método que revisa el nombre
 function checkName(name){
     let resp = false,
         tam = name.length,
         first = name.charAt(0);
 
     if(tam >= 3 && tam <= 15 && isNaN(first)){
-        if(checkCad(name,tam,englishAndNumber)) resp = true;
+        if(checkCad(name,tam,nameConditions)){
+            resp = true;
+            logmsg("nombre correcto");
+        } 
         else console.log("Contiene letras que no forman parte del alfabeto inglés o no son números");
     }
     else 
@@ -70,18 +81,56 @@ function checkPwd(pwd){
     
     contMin = false;
     contMayus = false;
+
+    log("tamaño de contraseña",tam);
+    log("muestro contraseña",pwd);
     
     if(tam >= 6 && tam <= 15){
-        if(checkCad(name,tam,pwdConditions)){
-            if(contMin && contMayus) resp = true;
+        if(checkCad(pwd,tam,pwdConditions)){
+            if(contMin && contMayus){
+                resp = true;
+                logmsg("contraseña correcta");
+            } 
             else console.log("Debe contener al menos una letra mayúscula y una letra minúscula")
         } 
         else console.log("Contiene letras que no forman parte del alfabeto inglés o no son números ni '-' ni '_'");
-    }
+    }else
+        console.log("Contraseña debe tener como mínimo 6 carácteres y como máximo 15");
     return resp;
 }
 
-//metodo que comprueba si los caracteres son los adecuados, para ello utiliza la funcion que recibe
+function checkPwd2(pwd,pwd2){
+    let resp = false;
+    log("primera contraseña",pwd);
+    log("segunda contraseña",pwd2);
+    if(pwd == pwd2){
+        logmsg("contraseñas son iguales");
+        resp = true;
+    } 
+    else console.log("Contraseñas no son iguales");
+
+    return resp;
+}
+
+function checkEmail(email){
+    let resp = false,
+        tam = email.length,
+        local = "",
+        separados = new Array(),
+        subdominios = new Array();
+
+    log("analizo este email",email);
+    if(tam > 0){
+        if(email.includes("@")){
+            separados = email.split("@");
+
+
+        }else console.log("No tiene formato de email (falta @)");
+    }else console.log("Email está vacío");
+
+    return resp;
+}
+/***************************************************************************************** */
 function checkCad(cad,tam,fnc){
     let resp = true,
         uni = 0;
@@ -118,7 +167,7 @@ function pwdConditions(uni){
 
     return resp;
 }
-
+/***************************************************************************************************************** */
 function err(err){
     console.log("Error: " + err);
 }
