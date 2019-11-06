@@ -1,4 +1,4 @@
-<!DOCTYPE html> d
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -28,12 +28,12 @@
 
 	<main>
 		<h3 class="neg">Formulario de Registro</h3>
-		<form action="./index_no_reg.html" class="formulario">
+		<form class="formulario">
 			<div><p class="ast">*</p><p id="obli2">Obligatorio</p></div>
-			<div><label for="nombre" >Usuario:</label> <p class="ast">*</p> <input id="nombre"  type="text"  name="nombre" required autofocus> </div>
-			<div><label for="pwd" >Contraseña:</label><p class="ast">*</p> <input id="pwd"  type="password"  name="pwd" required> </div>
-			<div><label for="pwd2" >Repetir:</label><p class="ast">*</p> <input id="pwd2"  type="password"  name="pwd2" required> </div>
-			<div><label for="mail" >Email:</label><p class="ast">*</p> <input id="mail"  type="email"  name="mail" required> </div>
+			<div><label for="nombre" >Usuario:</label> <p class="ast">*</p> <input id="nombre" type="text" name="nombre" autofocus> </div>
+			<div><label for="pwd" >Contraseña:</label><p class="ast">*</p> <input id="pwd" type="password" name="pwd"> </div>
+			<div><label for="pwd2" >Repetir:</label><p class="ast">*</p> <input id="pwd2" type="password" name="pwd2"> </div>
+			<div><label for="mail" >Email:</label><p class="ast">*</p> <input id="mail" name="mail"> </div>
 			<div><fieldset>
 				<legend>Sexo:</legend>
 				<input type="radio" id="hombre" name="sexo" value="hombre">
@@ -44,10 +44,10 @@
 				<label for="otro">Otro</label>
 			</fieldset></div>
 			<!--date no soportado por todos los navegadores-->
-			<div><label id="fech" for="fecha" >Fecha de nacimiento:</label><p class="ast">*</p> <input id="fecha"  type="date"  name="fecha" required> </div>
-			<div><label for="ciudad" >Ciudad:</label><p class="ast">*</p> <input id="ciudad" type="text"  name="ciudad" required> </div>
-			<div><label for="pais" >País de residencia:</label><p class="ast">*</p> <input id="pais"  type="text"  name="pais" required> </div>
-			<div id="no"><label id="fot" for="foto" >Foto:</label><p class="ast">*</p> <input id="foto"  type="file"  name="foto" required> </div>
+			<div><label id="fech" for="fecha" >Fecha de nacimiento:</label><p class="ast">*</p> <input id="fecha"  type="date"  name="fecha"> </div>
+			<div><label for="ciudad" >Ciudad:</label><p class="ast">*</p> <input id="ciudad" type="text"  name="ciudad"> </div>
+			<div><label for="pais" >País de residencia:</label><p class="ast">*</p> <input id="pais"  type="text"  name="pais"> </div>
+		<!--<div id="no"><label id="fot" for="foto" >Foto:</label><p class="ast">*</p> <input id="foto"  type="file"  name="foto"> </div> -->
 			<div><input id="bot" type="submit" value="Registrar"></div>
 		</form>
     </main>
