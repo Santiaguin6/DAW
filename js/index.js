@@ -43,15 +43,15 @@ function checkForm(e){
         sexo = form.sexo.value,
         fecha = form.fecha.value;
 
-    if(checkName(nombre)){
+    /*if(checkName(nombre)){
         if(checkPwd(pwd)){
             if(pwd2.length > 0 && checkPwd2(pwd,pwd2)){
-                if(checkEmail(email)){
+                if(*/checkEmail(email)/*){
 
                 }
             }
         }
-    }
+}*/
     
     
 
@@ -123,8 +123,10 @@ function checkEmail(email){
     if(tam > 0){
         if(email.includes("@")){
             separados = email.split("@");
-
-
+            local = separados[0];
+            subdominios = separados[1].split(".");
+            log("tengo este local",local);
+            log("tengo este/estos subdominios",subdominios);
         }else console.log("No tiene formato de email (falta @)");
     }else console.log("Email está vacío");
 
