@@ -140,7 +140,7 @@ body>form{
 }
 .formu{
     margin-top: 2em;
-    width: 300px;
+    width: 400px;
 }
     .formu>p{
         padding-bottom: 0.5em;
@@ -273,10 +273,10 @@ thead{
     color: white;
 }
 #obli{
-    padding-right: 15em;
+    padding-right: 20em;
 }
 #obli2{
-    padding-right: 10em;
+    padding-right: 8em;
 }
 .lab{
     width: 900px;

@@ -6,6 +6,10 @@
 	<title>Registro | PI & PICTURES IMAGES</title>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="alternate stylesheet" type="text/css" href="../css/contraste.css" title="Estilo de Alto Contraste">
+    <link rel="stylesheet" type="text/css" href="../css/impresion.css" title="Estilo de Impresión" media="print">
+    <link rel="alternate stylesheet" type="text/css" href="../css/letraMayor.css" title="Estilo de Letra Mayor">
+    <link rel="alternate stylesheet" type="text/css" href="../css/letraMayorContraste.css" title="Estilo de Letra Mayor con Contraste">
 </head>
 <body>
 
@@ -22,8 +26,9 @@
     </nav>
 
 	<main>
-		<h3>Formulario de Registro</h3>
+		<h3 class="neg">Formulario de Registro</h3>
 		<form action="./index_no_reg.html" class="formulario">
+			<div><p class="ast">*</p><p id="obli2">Obligatorio</p></div>
 			<div><label for="nombre" >Usuario:</label> <p class="ast">*</p> <input id="nombre"  type="text"  name="nombre" required autofocus> </div>
 			<div><label for="pwd" >Contraseña:</label><p class="ast">*</p> <input id="pwd"  type="password"  name="pwd" required> </div>
 			<div><label for="pwd2" >Repetir:</label><p class="ast">*</p> <input id="pwd2"  type="password"  name="pwd2" required> </div>
@@ -41,7 +46,7 @@
 			<div><label id="fech" for="fecha" >Fecha de nacimiento:</label><p class="ast">*</p> <input id="fecha"  type="date"  name="fecha" required> </div>
 			<div><label for="ciudad" >Ciudad:</label><p class="ast">*</p> <input id="ciudad" type="text"  name="ciudad" required> </div>
 			<div><label for="pais" >País de residencia:</label><p class="ast">*</p> <input id="pais"  type="text"  name="pais" required> </div>
-			<div><label id="fot" for="foto" >Foto:</label><p class="ast">*</p> <input id="foto"  type="file"  name="foto" required> </div>
+			<div id="no"><label id="fot" for="foto" >Foto:</label><p class="ast">*</p> <input id="foto"  type="file"  name="foto" required> </div>
 			<div><input id="bot" type="submit" value="Registrar"></div>
 		</form>
     </main>
