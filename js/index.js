@@ -21,6 +21,9 @@ var EXCL = 33, ALMH = 35, DOL = 36, PERC = 37, AMP = 38, COM = 39, AST = 42, MAS
     SLASH = 47, CERO = 48, NUEVE = 57, IGUAL = 61, INTE = 63, A = 65, Z = 90, POT = 94, BAR = 95, 
     ACEN = 96, a = 97, z = 122, CORCH1 = 123, CORCH2 = 124,PIPE = 124, VIRG = 126, POINT = 46;
 
+var contMayus;
+var contMin;
+
 //metodo inicial que llama al metodo que revisa el formulario
 function init(){
     logmsg("estoy en init");
@@ -65,8 +68,15 @@ function checkPwd(pwd){
     let resp = false;
         tam = pwd.length;
     
+    contMin = false;
+    contMayus = false;
+    
     if(tam >= 6 && tam <= 15){
-        
+        if(checkCad(name,tam,pwdConditions)){
+            if(contMin && contMayus) resp = true;
+            else console.log("Debe contener al menos una letra mayúscula y una letra minúscula")
+        } 
+        else console.log("Contiene letras que no forman parte del alfabeto inglés o no son números ni '-' ni '_'");
     }
     return resp;
 }
@@ -87,7 +97,7 @@ function checkCad(cad,tam,fnc){
     return resp;
 }
 
-function englishAndNumber(uni){
+function nameConditions(uni){
     let resp = true;
     if(!((uni >= CERO && uni <= NUEVE) || (uni >= A && uni <= Z) || (uni >= a && uni <= z))){
         logmsg("cáracter no forma parte del alfabeto inglés o no forma parte de números");
@@ -96,7 +106,18 @@ function englishAndNumber(uni){
     return resp;
 }
 
+function pwdConditions(uni){
+    let resp = true;
 
+    resp = nameConditions(uni);
+    if(resp){
+        if(uni >= A && uni <= Z) contMayus = true;
+        else contMin = true;
+    }else
+        if(uni == GUION || uni == BAR) resp = true;
+
+    return resp;
+}
 
 function err(err){
     console.log("Error: " + err);
