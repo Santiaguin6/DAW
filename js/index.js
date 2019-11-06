@@ -61,9 +61,17 @@ function checkName(name){
     return resp;
 }
 
-//metodo que comprueba si la cadena tiene solo:
-//  -números
-//  -letras del alfabeto inglés
+function checkPwd(pwd){
+    let resp = false;
+        tam = pwd.length;
+    
+    if(tam >= 6 && tam <= 15){
+        
+    }
+    return resp;
+}
+
+//metodo que comprueba si los caracteres son los adecuados, para ello utiliza la funcion que recibe
 function checkCad(cad,tam,fnc){
     let resp = true,
         uni = 0;
@@ -76,7 +84,6 @@ function checkCad(cad,tam,fnc){
             break;
         }
     }
-
     return resp;
 }
 
