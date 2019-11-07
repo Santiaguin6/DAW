@@ -23,6 +23,7 @@ var EXCL = 33, ALMH = 35, DOL = 36, PERC = 37, AMP = 38, COM = 39, AST = 42, MAS
 
 var contMayus;
 var contMin;
+var contPoint;
 
 /********************************************************************************************* */
 function init(){
@@ -127,11 +128,46 @@ function checkEmail(email){
             subdominios = separados[1].split(".");
             log("tengo este local",local);
             log("tengo este/estos subdominios",subdominios);
+            checkLocal(local);
+
+
         }else console.log("No tiene formato de email (falta @)");
     }else console.log("Email está vacío");
 
     return resp;
 }
+
+
+function checkLocal(local){
+    let resp = fales;
+        tam = local.length;
+    log("estoy en checkLocal y recibo este local",local);
+    contPoint = 0;
+
+    if(tam > 0 && tam <= 64){
+        log("primer caracter",local.charAt(0));
+        log("last caracter",local.charAt(tam-1));
+        if(local.charAt(0)!=POINT && local.charAt(tam-1)!=POINT){
+            resp = checkCad(local,tam,localConditions);
+            if(resp) console.log("Nombre local correcto");
+            else console.log("Nombre local incorrecto");
+        }else console.log("No puede haber un punto ni al principio ni al final del nombre local");
+    } else console.log("Está vacío o tamaño superior a 64");
+
+    return resp;
+}
+
+
+
+function checkDominio(dominio){
+    let resp = false;
+
+    return resp;
+}
+
+
+
+
 /***************************************************************************************** */
 function checkCad(cad,tam,fnc){
     let resp = true,
@@ -169,6 +205,58 @@ function pwdConditions(uni){
 
     return resp;
 }
+
+function localConditions(uni){
+    let resp = true,
+        symbols = getSymbols();
+
+    resp = pwdConditions(uni);
+    
+    if(!resp){
+        log("symbolos",symbols);
+        for(let i = 0;i < symbols.length ; i++){
+        //symbols.forEach(function(e){
+            log("analizo unicode",symbols[i]);
+            if(uni == symbols[i]){ 
+                if(uni == POINT) contPoint++;
+                else contPoint = 0;
+                if(contPoint != 2) resp = true;
+                else console.log("No pueden haber dos puntos seguidos");
+                break; 
+            }
+       // });
+        }
+    }
+    return resp;
+}
+
+function getSymbols(){
+    let symbols = new Array();
+    
+    symbols.push(EXCL);
+    symbols.push(ALMH);
+    symbols.push(DOL);
+    symbols.push(PERC);
+    symbols.push(AMP);
+    symbols.push(COM);
+    symbols.push(AST);
+    symbols.push(MAS);
+    symbols.push(SLASH);
+    symbols.push(IGUAL);
+    symbols.push(INTE);
+    symbols.push(POT);
+    symbols.push(ACEN);
+    symbols.push(CORCH1);
+    symbols.push(CORCH2);
+    symbols.push(PIPE);
+    symbols.push(VIRG);
+    symbols.push(POINT);
+
+    return symbols;
+}
+
+
+
 /***************************************************************************************************************** */
 function err(err){
     console.log("Error: " + err);
