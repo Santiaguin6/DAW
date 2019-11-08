@@ -1,0 +1,8 @@
+-con addEventListener lo ponemos a elemento a la escucha de un evento (click,submit,...)
+-con event.preventDefault() detenemos el evento
+-charCodeAt() devuelve código unicode
+-charAt() devuelve caracter
+-isNaN para comprobar si el string es un número
+-.includes() indica si cadena incluye cadena entre paréntesis
+-new Date().getFullYear() devuelve año actual 
+-toFixed(2) hace que número solo tenga dos decimales

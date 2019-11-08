@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--evitar que el dispositivo escale el diseño al tamaño de la pantalla-->
+	<title>Solicitar Álbum | PI & PICTURES IMAGES</title>
+	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="alternate stylesheet" href="../css/contraste.css" title="Estilo de Alto Contraste">
+    <link rel="stylesheet" href="../css/impresion.css" title="Estilo de Impresión" media="print">
+    <link rel="alternate stylesheet" href="../css/letraMayor.css" title="Estilo de Letra Mayor">
+    <link rel="alternate stylesheet" href="../css/letraMayorContraste.css" title="Estilo de Letra Mayor con Contraste">
+	<script src="../js/index.js"></script>
+	<script>
+		window.addEventListener("load",insertTable);
+	</script>
+</head>
+<body>
+	<header>
+        <a href="../html/index_reg.html"><h1>PI & PICTURES IMAGES</h1></a>
+        <h2>Solicitar Álbum</h2>
+    </header>
+
+	<nav>
+        <ul>
+            <li><a href="../html/index_reg.html">Principal</a></li>
+            <li><a href="../html/menu_privado.html">Mi Perfil</a></li>
+            <li><a href="../html/busqueda.html">Búsqueda</a></li>
+            <li><a href="../html/index_no_reg.html">Salir</a></li>
+        </ul>
+    </nav>
+
+	<main>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+		<div class="general">
+			<div class="tablita">
+				<table>
+					<caption>Tarifas</caption>
+					<thead>
+						<tr>
+							<th>Concepto</th>   <!-- header, importante para accesibilidad-->
+							<th>Tarifa</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Menos de 5 páginas</td>
+						<td>0.10€ por pág</td>
+					</tr>
+					<tr>
+						<td>Entre 5 y 11 páginas</td>
+						<td>0.08€ por pág</td>
+					</tr>
+					<tr>
+						<td>Más de 11 páginas</td>
+						<td>0.07€ por pág</td>
+					</tr>
+					<tr>
+						<td>Blanco y negro</td>
+						<td>0€</td>
+					</tr>
+					<tr>
+						<td>Color</td>
+						<td>0.05€ por foto</td>
+					</tr>
+					<tr>
+						<td>Resolución mayor de 300dpi</td>
+						<td>0.02€ por foto</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="formu">
+				<form action="./res_solicitar_album.html" class="formulario">
+					<h3 class="neg" id="sol">Formulario de la solicitud</h3>
+					<div> <p class="ast">*</p><p id="obli">Obligatorio</p></div>
+					<div><label for="nombre" >Nombre:</label><p class="ast">*</p> <input class="lab" id="nombre"  type="text" maxlength="200" name="nombre" required> </div>
+					<div><label for="titulo" >Título del Álbum:</label><p class="ast">*</p> <input class="lab" id="titulo"  type="text" maxlength="200" name="titulo" required> </div>
+					<div><label for="texto" >Texto Adicional:</label> <textarea class="lab" id="texto" name="texto"> </textarea>  </div>
+					<div><label  >Dirección:</label> </div>
+					<div><label for="calle">Calle:</label><p class="ast">*</p> <input class="lab" id="calle" type="text" name="calle" required></div>
+					<div><label for="num">Número:</label><p class="ast">*</p> <input class="lab" id="num" type="number" name="num" required> </div>
+					<div><label for="piso">Piso:</label><p class="ast">*</p> <input class="lab" id="piso" type="number" name="piso" required> </div>
+					<div><label for="puerta">Puerta:</label><p class="ast">*</p> <input class="lab" id="puerta" type="text" name="puerta" required> </div>
+					<div><label for="cod">Código Postal:</label><p class="ast">*</p> <input class="lab" id="cod" type="text" name="cod" required> </div>
+					<div><label for="localidad">Localidad:</label><p class="ast">*</p> <input class="lab" id="localidad" type="text" name="localidad" required> </div>
+					<div><label for="provincia">Provincia:</label><p class="ast">*</p> <input class="lab" id="provincia" type="text" name="provincia" required> </div>
+					
+					<div>
+						<label for="pais" >País:</label> 
+						<select id="pais" name="album">
+							<option value="esp">Alemania</option> <!-- value-->
+							<option value="fr">España</option>
+							<option value="ger">Francia</option>
+							<option value="gre">Grecia</option>
+							<option value="it">Italia</option>
+							<option value="port">Portugal</option>
+						</select>
+					</div>
+					
+					<div><label for="mail" >Correo Electrónico:</label><p class="ast">*</p> <input class="lab" id="mail"  type="email" maxlength="200" name="mail" required></div>
+					<div><label for="tel" >Teléfono:</label> <input class="lab" id="tel"  type="tel"  name="tel" > </div>
+					<div><label for="color" >Color de Portada:</label> <input class="lab" id="color"  type="color"  name="color" > </div>
+					<div><label for="num2" >Número de Copias:</label> <input class="lab" id="num2"  type="number"  name="num2" min="1" value="1" > </div>
+					<div><label for="res" >Resolución de las fotos:</label> <input class="lab" id="res"  type="number"  name="res" min="150" step="150" max="900" value="150" >  </div>
+
+					<div>
+						<label for="album" >Álbum:</label> 
+					 	<select id="album" name="album">
+							<option value="a1">Album1</option>  <!-- value-->
+							<option value="a2">Album2</option>
+							<option value="a3">Album3</option>
+						</select>
+					</div>
+					
+					<div><label for="fecha" >Fecha:</label> <input class="lab" id="fecha"  type="date"  name="fecha" > </div>
+					
+					<div>
+						<fieldset>
+							<legend>Color de impresión:</legend>
+							<input type="radio" id="byn" name="color" value="byn">  <!--for y value-->
+							<label for="byn">Blanco y negro</label>
+							<input type="radio" id="todo" name="color" value="todo">  
+							<label for="todo">Todo color</label>
+						</fieldset>
+					</div>
+					
+					<div><input id="bot" type="submit" value="Enviar"></div>
+				</form>
+			</div>
+
+		</div>
+	</main>
+
+    <footer>
+		PI & PICTURES IMAGES
+		&copy;2019
+		<address>
+			<p>Santiago López santiaguin55.sl@gmail.com</p>
+			<p>Rafael Bayón rafabayonazocar@gmail.com</p> 
+		</address>
+		<a href="../html/accesibilidad.html"><p>Accesibilidad de la web</p></a>
+	</footer>
+</body>
+</html>

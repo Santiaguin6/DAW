@@ -1,0 +1,83 @@
+@page { size:auto}
+
+*{
+    background-color: #FFF;
+    color: #000;
+    font-size: 12pt;
+}
+body{
+	height: 100%;
+}
+
+nav{
+	display: none;
+}
+a{
+	color: #000;
+}
+h1,h2,h3,h4{
+	padding-top: 0.3cm;
+    font-family:serif;
+    color: #000;
+    margin: 0;
+}
+time{
+	color: #000;
+}
+body>footer{
+	padding-top: 0.3cm;
+	background-color: #FFF;
+	color: #000;
+}
+.ast{
+	color: #000;
+}
+#bot{
+	display: none;
+}
+.formulario>div>input{
+        flex-grow: 0.1;
+        border-radius: 8px;
+        border: 2px solid #000;
+        color: #000;
+    }
+    .formulario>div>fieldset{
+        border-color: #000;
+        border-radius: 8px;
+    }
+    .formulario>div>fieldset>legend{
+        height: 15px;
+        border-color: #000;
+    }
+    .formulario>div>select{
+        color: #000;
+        flex-grow: 0.1;
+        border-radius: 8px;
+        border: 2px solid #000;
+    }
+ .formulario>div>textarea{
+        flex-grow: 0.1;
+        border-radius: 8px;
+        border: 2px solid #000;
+        color: #000;
+    }
+
+#enlace>a{
+	text-decoration: underline;
+}
+#enlace>a:after {
+    content:" <" attr(href) ">";
+}
+main>ul>li>a{
+	text-decoration: underline;
+}
+.formulario{
+	page-break-inside:avoid;
+}
+img{
+	page-break-inside: avoid;
+}
+#no{
+	display: none;
+}
+

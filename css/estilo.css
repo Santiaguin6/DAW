@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/*##################################################################
+####################### COMUNES ####################################
+##################################################################*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); /*titulos*/
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap'); /*contenido*/
+
+
+*{
+    box-sizing: border-box;
+    font-family: Lora,serif;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    font-family: Lato,serif;
+    color: #FFF;
+    margin: 0;
+}
+
+a:hover,h1:hover{
+    color: #3D79C1;
+}
+
+img{
+    height: 270px;
+    width: 400px;
+}
+
+p{
+    margin: 0;
+}
+
+time{
+    color: #CD1DCC;
+    font-size: .8em;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+    li{
+        margin-right: 20px;
+    }
+
+.neg{
+    color: #000;
+}
+
+/*--------------------------------------------------------*/
+
+body{
+    margin: 0;
+    min-width: 360px;
+}
+
+    body>header{
+        background-color: #0B466D;
+        text-align: center;
+    }
+
+    body>footer {
+        background-color: #0B466D;
+        font-size: 15px;
+        color: #FFF;
+        text-align: center;
+    }
+
+        address{
+            display:flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+/*#####################################################################################
+####################### INDEX, RESULTADO BÚSQUEDA  ####################################
+#####################################################################################*/
+main{
+    text-align: center;
+}
+
+    main>section{
+        display: flex;
+        flex-direction: column;
+    }   
+
+        main>section>article{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            margin-bottom: 1px;
+            margin-top: 10px;
+            max-width: 400px;
+        }
+
+            main>section>article>a>img:hover{
+                cursor: pointer;
+                opacity: 0.2;
+            }
+
+            main>section>article>footer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+/*##################################################################
+####################### FORMULARIOS ################################
+##################################################################*/
+
+main>h3{
+	display: flex;
+	justify-content: center;
+}
+
+body>form{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 20em;
+}
+
+.general{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.tablita{
+    margin-top: 2em;
+}
+.formu{
+    margin-top: 2em;
+    width: 400px;
+}
+    .formu>p{
+        padding-bottom: 0.5em;
+        align-items: left;
+    }
+
+
+.formulario{
+    align-items: right;
+}
+
+.formulario>div{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5em;
+}
+    .formulario>div>label{
+        width: 6em;
+        padding-right: 0.1em;
+    }
+    .formulario>div>input{
+        flex-grow: 0.1;
+        border-radius: 8px;
+        border: 2px solid #0B466D;
+        color: #000;
+    }
+    .formulario>div>fieldset{
+        border-color: #0B466D;
+        border-radius: 8px;
+    }
+    .formulario>div>fieldset>legend{
+        height: 15px;
+        border-color: #0B466D;
+    }
+    .formulario>div>select{
+        color: #000;
+        flex-grow: 0.1;
+        border-radius: 8px;
+        border: 2px solid #0B466D;
+    }
+        .formulario>div>select>option{
+            color: #000;
+            
+        }
+     .formulario>div>textarea{
+        flex-grow: 0.1;
+        border-radius: 8px;
+        border: 2px solid #0B466D;
+        color: #000;
+    }
+
+#enlace{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 2em;
+    margin-top: none;
+
+}
+	#enlace2{
+		margin-right: 0.5em;
+	}
+#bot{
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #0B466D;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    cursor: pointer;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+	#bot:hover{
+		color: #0016b0;
+    	background-color: #ffffff;
+	}
+.material-icons{
+	color: #0B466D;
+}
+#fech{
+	margin-right: 1.1em;
+}
+	#fecha{
+		flex-grow: 0.1;
+	}
+#fot{
+	margin-left: 7em;
+}
+
+#sol{
+    
+}
+
+.ast{
+    color: red;
+}
+#precio{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-radius: 35px 0px 35px 0px;
+    -moz-border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px;
+    border: 2px solid #0B466D;;
+}
+
+body>main>table{
+    width: 60%;
+    text-align: left;
+    border-collapse: collapse;
+}
+    body>main>table>caption{
+        margin-top: 2em;
+
+    }
+th, td{
+   /* border: solid 1px white;*/
+    padding: 2px;
+}
+thead{
+    background-color: #0B466D;
+    border-bottom: solid 5px #505953;
+    color: white;
+}
+#obli{
+    padding-right: 20em;
+}
+#obli2{
+    padding-right: 8em;
+}
+.lab{
+    width: 900px;
+}
+
+
+/*########################################################################
+####################### FOTO  ####################################
+########################################################################*/
+
+.foto{
+    margin: 0 auto;
+    max-width:  60vw;
+}
+
+    .foto>img{
+        height: 100%;
+        width: 100%;
+    }
+
+main>section>footer{
+    display: flex;
+    flex-direction: column;
+}
+
+    main>section>footer>time{
+        text-align: right;
+    }
+
+    main>section>footer>p{
+        text-align: left;
+    }
+
+/*########################################################################
+####################### MENU PRIVADO  ####################################
+########################################################################*/
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+    li>a{
+        text-decoration: none;
+        font-size: 1.5em;
+        margin: 10px;
+    }
+
+/*########################################################################
+####################### MEDIA QUERYS  ####################################
+########################################################################*/
+@media all and (min-width:575px){
+/*------------ común ------------*/
+    address{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+        address>p{
+            margin-right: 20px;
+        }
+}
+
+@media all and (min-width:900px){
+/*------------ index, resultado búsqueda------------*/
+    main>section:not(.foto){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-gap: 1px 1px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+/*------------ menu privado------------*/
+    ul{
+        justify-content: center;
+        flex-direction: row;
+    }
+}
+
+@media all and (min-width:1200px){
+/*------------ index, resultado búsqueda------------*/
+    main>section:not(.foto){
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        max-width: 1200px;
+    }
+}
+
+.capa-fondo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.8);
+}
+    .capa-fondo>article{
+        background-color: #FFF;
+        border: 1px solid #000;
+        width: 20em;
+        padding: 0;
+        top: 5%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .capa-fondo>article>h2{
+        margin: 0;
+        text-align: center;
+        background-color: #0B466D;
+    }
+    .capa-fondo>article>p{
+        text-align: center;
+        padding: .5em;
+    }
+    .capa-fondo>article>button{
+        margin: .5em auto;
+        display: block;
+        width: 5em;
+    }
+
+    #acc{
+        list-style: circle;
+    }
+    #acc2{
+        padding-left: 2em; 
+    }
+    #men{
+        list-style: none;
+    }
+    footer>a{
+        color: #FFF;
+    }    
